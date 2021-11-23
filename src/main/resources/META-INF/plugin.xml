@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>me.peruma.plugins.inspection.poc</id>
+
+    <name>Code Inspection Sample</name>
+
+    <vendor url="https://peruma.me" email="anthony.peruma@mail.rit.edu">AnthonyPeruma</vendor>
+
+    <version>1.0.0</version>
+
+    <description>This is a proof-of-concept plugin for IntelliJ IDEA.</description>
+
+    <change-notes>Initial release of the plugin.</change-notes>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider implementation="me.peruma.plugins.poc.inspections.MyCustomSmellInspectionProvider"/>
+    </extensions>
+
+    <!-- Actions -->
+    <actions>
+    </actions>
+
+    <projectListeners>
+    </projectListeners>
+
+
+    <resource-bundle/>
+</idea-plugin>
